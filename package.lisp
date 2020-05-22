@@ -1,2 +1,3 @@
 (defpackage :regex-generator
-  (:use :cl :alexandria))
+  (:use :cl :alexandria)
+  (:export :generate))
