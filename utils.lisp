@@ -35,3 +35,8 @@
 
 (defun random-non-whitespace-char ()
   (random-expected-char (complement #'ppcre::whitespacep)))
+
+(defun string-append (&rest strings)
+  (with-output-to-string (out)
+    (dolist (str strings)
+      (write-string str out))))
