@@ -4,7 +4,6 @@
   :components ((:file "package")
                (:file "constants")
                (:file "utils")
-               (:file "specials")
                (:file "regex-class")
                (:file "convert")
                (:file "generate"))
