@@ -1,4 +1,7 @@
 (defsystem "cl-string-generator"
+  :license "MIT"
+  :author "Pocket Change"
+  :description "Generate string from regular expression"
   :depends-on ("alexandria" "cl-ppcre")
   :serial t
   :components ((:file "package")
