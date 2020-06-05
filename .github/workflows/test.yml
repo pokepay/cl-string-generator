@@ -22,7 +22,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
       with:
-        path: ./regex-generator
+        path: ./cl-string-generator
     - name: Install Roswell
       env:
         LISP: ${{ matrix.lisp }}
@@ -34,6 +34,6 @@ jobs:
       run: |
         PATH="~/.roswell/bin:$PATH"
         mkdir -p ~/.roswell/local-projects/pokepay
-        mv $GITHUB_WORKSPACE/regex-generator ~/.roswell/local-projects/pokepay/regex-generator
-        cd ~/.roswell/local-projects/pokepay/regex-generator
-        rove regex-generator.asd
+        mv $GITHUB_WORKSPACE/cl-string-generator ~/.roswell/local-projects/pokepay/cl-string-generator
+        cd ~/.roswell/local-projects/pokepay/cl-string-generator
+        rove cl-string-generator.asd

@@ -1,4 +1,4 @@
-(in-package :regex-generator)
+(in-package :cl-string-generator)
 
 (defvar *registers*)
 

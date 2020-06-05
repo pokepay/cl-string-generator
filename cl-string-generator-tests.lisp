@@ -1,6 +1,6 @@
-(defpackage #:regex-generator-tests
-  (:use :cl :regex-generator :rove :alexandria))
-(in-package #:regex-generator-tests)
+(defpackage #:cl-string-generator-tests
+  (:use :cl :cl-string-generator :rove :alexandria))
+(in-package #:cl-string-generator-tests)
 
 (defun ensure-char (string)
   (assert (and (stringp string)

@@ -1,4 +1,4 @@
-(in-package :regex-generator)
+(in-package :cl-string-generator)
 
 (defun word-char-p (c)
   (or (alphanumericp c)
