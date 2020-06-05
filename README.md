@@ -1,5 +1,7 @@
 # cl-string-generator
 
+Generate string from regular expression
+
 ## Usage
 ```common-lisp
 (ql:quickload :cl-string-generator)
@@ -17,3 +19,6 @@
 (generate "a*b*" :min-length 3 :max-length 4)
 ;; => "aaab"
 ```
+
+## License
+MIT
