@@ -7,8 +7,8 @@ Generate string from regular expression
 (ql:quickload :cl-string-generator)
 (use-package :cl-string-generator)
 
-(generate "0[6-9]0-\\d{4}-\\d{4}")
-;; => "080-9844-1389"
+(generate "[0-9A-F]{8}-(?:[0-9A-F]{4}-){3}[0-9A-F]{8}")
+;; => "A64BE7F3-1041-6C90-D8EB-2A0F46A8"
 
 (generate "(foo|bar)\\1")
 ;; => "foofoo"
