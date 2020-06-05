@@ -85,7 +85,7 @@
         (sb-kernel:*maximum-error-depth* 1000000)
         (*registers* (make-hash-table)))
     (restart-case
-        (generate-aux (convert regex) max-length)
+        (generate-aux (convert regex) (or max-length +string-length-limit+))
       (next ()))))
 
 (defun generate-using-handler (regex max-length function)
@@ -97,7 +97,7 @@
                                  (return-from generate-using-handler))))))
     (%generate regex max-length)))
 
-(defun generate (regex &key (max-length 10) (min-length 0))
+(defun generate (regex &key (min-length 0) max-length)
   (generate-using-handler regex
                           max-length
                           (lambda (string)
