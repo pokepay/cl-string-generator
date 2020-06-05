@@ -57,7 +57,7 @@
                         (f (1- n)
                            (string-append acc string)
                            (- rest-length (length string))))))))
-      (let ((maximum rest-length)
+      (let ((maximum (min (.maximum regex) rest-length))
             (minimum (.minimum regex)))
         (dolist (n (shuffle (loop :for n :from minimum :to maximum :collect n)))
           (restart-case

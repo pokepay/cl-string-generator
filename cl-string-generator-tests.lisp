@@ -60,6 +60,10 @@
   (ok (loop :repeat 10 :always (ppcre:scan "^a*$" (generate "a*"))))
   (ok (loop :repeat 100 :always (ppcre:scan "^([0-9]*)\\1$" (generate "([0-9]*)\\1")))))
 
+(deftest repetition-tests
+  (ok (loop :repeat 100
+            :always (string= (generate "a{4}") "aaaa"))))
+
 (deftest max-length-tests
   (ok (loop :repeat 100
             :always (<= (length (generate "a*b*" :max-length 3)) 3))))
