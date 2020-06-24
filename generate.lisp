@@ -22,6 +22,9 @@
 
 (defgeneric generate-aux (regex rest-length))
 
+(defmethod generate-aux ((regex null) rest-length)
+  (value ""))
+
 (defmethod generate-aux ((regex void) rest-length)
   (value ""))
 

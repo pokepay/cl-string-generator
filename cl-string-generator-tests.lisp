@@ -67,3 +67,8 @@
 (deftest max-length-tests
   (ok (loop :repeat 100
             :always (<= (length (generate "a*b*" :max-length 3)) 3))))
+
+(deftest random-tests
+  (ok (loop :repeat 100
+            :always (ppcre:scan "^[a-zA-Z0-9-]*$"
+                                (generate "^[a-zA-Z0-9-]*$")))))
