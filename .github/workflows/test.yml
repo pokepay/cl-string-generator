@@ -28,3 +28,4 @@ jobs:
         mv $GITHUB_WORKSPACE/cl-string-generator ~/.roswell/local-projects/pokepay/cl-string-generator
         cd ~/.roswell/local-projects/pokepay/cl-string-generator
         rove cl-string-generator.asd
+        
